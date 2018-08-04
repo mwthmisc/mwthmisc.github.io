@@ -44,7 +44,9 @@
                 {
                     $("#countdown-container, #jerkbox-container").hide();
                     $("#complete").slideDown();
+                    $("#complete h1").addClass("animated bounceInUp");
                     $("button").addClass("disabled");
+
                 }
                 
             });
@@ -78,12 +80,12 @@
 
         #countdown-container button.active { background-color: #28a745 !important; }
 
-        #complete h1 { color: #007bff; }
+        #complete h1 { color: #008000; /*#007bff;*/ }
         #jerk h1 { color: red; }
 
         #complete, #jerk { display: none; }
 
-      
+        .jumbotron { background-color: #FFFFFF; }      
 
     </style>
 
