@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="animate/animate.min.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+
+        $(document).ready(function ()
+        {
+            initJerkBoxEvents();
+        });
+
+        function initJerkBoxEvents()
+        {
+            $("#jerkbox-container button").click(function ()
+            {
+                $(this).toggleClass("active");
+
+                if ($("#jerkbox-container button:not(.active)").length == 0)
+                {
+                    $("#countdown-container, #jerkbox-container").addClass("hidden");
+                    $("#jerk").slideDown();
+                    $("button").addClass("disabled");
+                }
+
+            });
+        }
+
+
+    </script>
+
+    <style type="text/css">
+
+        button { font-size: 42px !important; font-weight: bold !important; }
+
+        #jerkbox-container button { color: #FFFFFF; }
+        #jerkbox-container button.active { background-color: red !important; }
+
+        #countdown-container button.active { background-color: #28a745 !important; }
+
+        #complete h1 { color: #007bff; }
+        #jerk h1 { color: red; }
+
+        #complete, #jerk { display: none; }
+        
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+
+
+        <div id="jerk" class="row">
+
+            <div class="col-sm-12 text-center">
+                <div class="jumbotron">
+                    <img src="images/sad.png" />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">&nbsp;</div>
+
+        <div id="jerkbox-container" class="row">
+
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10">
+
+                <div class="row">
+
+                    <div class="col-sm-2">
+
+                        <button class="btn btn-lg btn-warning btn-primary">&nbsp;1&nbsp;</button>
+
+                    </div>
+
+                    <div class="col-sm-2">
+
+                        <button class="btn btn-lg btn-warning btn-primary">&nbsp;2&nbsp;</button>
+
+                    </div>
+
+                    <div class="col-sm-2">
+
+                        <button class="btn btn-lg btn-warning btn-primary">&nbsp;3&nbsp;</button>
+
+                    </div>
+
+                    <div class="col-sm-2">
+
+                        <button class="btn btn-lg btn-warning btn-primary">&nbsp;4&nbsp;</button>
+
+                    </div>
+
+                    <div class="col-sm-2">
+
+                        <button class="btn btn-lg btn-warning btn-primary">&nbsp;5&nbsp;</button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-sm-1"></div>
+
+
+        </div>
+
+        <div class="row" style="margin-top: 100px;">
+            
+            <div class="col-sm-12 text-center">
+
+                <a href="index.html">food</a>
+
+            </div>
+             
+        </div>
+        
+
+
+    </div>
+
+
+    <div class="hidden" id="counterTemplate">
+
+        <div class="col-sm-1">
+
+        </div>
+
+    </div>
+
+    
+
+</body>
+</html>

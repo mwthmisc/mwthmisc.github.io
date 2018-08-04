@@ -42,7 +42,7 @@
 
                 if ($("#countdown-container button:not(.active)").length == 0)
                 {
-                    $("#countdown-container, #jerkbox-container").addClass("hidden");
+                    $("#countdown-container, #jerkbox-container").hide();
                     $("#complete").slideDown();
                     $("button").addClass("disabled");
                 }
@@ -58,7 +58,7 @@
 
                 if ($("#jerkbox-container button:not(.active)").length == 0)
                 {
-                    $("#countdown-container, #jerkbox-container").addClass("hidden");
+                    $("#countdown-container, #jerkbox-container").hide();
                     $("#jerk").slideDown();
                     $("button").addClass("disabled");
                 }
@@ -95,7 +95,8 @@
 
             <div class="col-sm-12 text-center">
                 <div class="jumbotron">
-                    <h1 class="animated infinite rubberBand slower">All done!</h1>
+                    <img src="images/happy.png" class="animated infinite pulse bounce" />
+                    <h1>All done!</h1> <!--class="animated infinite rubberBand slower"-->
                 </div>
             </div>
 
@@ -105,6 +106,7 @@
 
             <div class="col-sm-12 text-center">
                 <div class="jumbotron">
+                    <img src="images/sad.png" />
                     <h1>Try again later.</h1>
                 </div>
             </div>
@@ -164,6 +166,17 @@
 
 
         </div>
+
+        <div class="row" style="margin-top: 100px;">
+            
+            <div class="col-sm-12 text-center">
+
+                <a href="jerk.html">daily</a>
+
+            </div>
+             
+        </div>
+        
 
 
     </div>
